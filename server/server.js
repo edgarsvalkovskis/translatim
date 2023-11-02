@@ -7,6 +7,6 @@ app.use(cors());
 
 // add your endpoints here
 
-app.get(PORT, (_, response) => response.json("Root route for translatim."));
+app.get("/", (_, response) => response.json("Root route for translatim."));
 
 app.listen(PORT, () => console.log(`App is running PORT ${PORT}`));
