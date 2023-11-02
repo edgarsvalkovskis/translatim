@@ -19,6 +19,10 @@ function App() {
 
   return (
     <>
+      <header>
+        <h1>Trans Wordination</h1>
+      </header>
+
       <form>
         <div className="container">
           <select onChange={(event) => setFrom(event.target.value)}>
