@@ -11,8 +11,8 @@ function App() {
   // onsubmit function that calls our API to get the translation
   async function handleTranslate(event) {
     event.preventDefault();
-    const API = `http://localhost:8080/translate?word=${word}&from=${from}&to=${to}`;
-    // const API = `https://translatim-ev0b.onrender.com/translate?word=${word}&from=${from}&to=${to}`;
+    // const API = `http://localhost:8080/translate?word=${word}&from=${from}&to=${to}`;
+    const API = `https://translatim-ev0b.onrender.com/translate?word=${word}&from=${from}&to=${to}`;
     const res = await axios.get(API);
     setTranslation(res.data.translation);
     setImage(res.data.image);
