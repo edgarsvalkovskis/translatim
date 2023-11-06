@@ -20,32 +20,35 @@ function App() {
 
   return (
     <>
-      <form onSubmit={handleTranslate}>
-        <div className="container">
-          <select onChange={(event) => setFrom(event.target.value)}>
-            <option value="ar">Arabic</option>
-            <option value="en">English</option>
-            <option value="pl">Polish</option>
-            <option value="es">Spanish</option>
-            <option value="tr">Turkish</option>
-          </select>
-          <input
-            placeholder="Translate"
-            onChange={(event) => setWord(event.target.value)}
-          />
-        </div>
-        <div className="container">
-          <select onChange={(event) => setTo(event.target.value)}>
-            <option value="ar">Arabic</option>
-            <option value="en">English</option>
-            <option value="pl">Polish</option>
-            <option value="es">Spanish</option>
-            <option value="tr">Turkish</option>
-          </select>
-          <div className="output">{translation}</div>
-        </div>
-        <button>Submit</button>
-      </form>
+      <section className="container">
+        <form onSubmit={handleTranslate}>
+          <div className="container">
+            <select onChange={(event) => setFrom(event.target.value)}>
+              <option value="en">English</option>
+              <option value="ar">Arabic</option>
+              <option value="pl">Polish</option>
+              <option value="es">Spanish</option>
+              <option value="tr">Turkish</option>
+            </select>
+            <input
+              placeholder="Translate"
+              onChange={(event) => setWord(event.target.value)}
+            />
+          </div>
+          <div className="container">
+            <select onChange={(event) => setTo(event.target.value)}>
+              <option value="pl">Polish</option>
+              <option value="ar">Arabic</option>
+              <option value="en">English</option>
+              <option value="es">Spanish</option>
+              <option value="tr">Turkish</option>
+            </select>
+            <div className="output">{translation}</div>
+          </div>
+          <button>Submit</button>
+        </form>
+      </section>
+
       <img src={image} />
       {/* show our translation */}
       {/* STRETCH: show a gif from the GIPHY API that matches the translation */}
